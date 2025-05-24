@@ -15,7 +15,7 @@ let reset = () => {
     city.textContent = "CITY";  // Reset city name
     country.textContent = "COUNTRY";  // Reset country
     temp.textContent = "TEMPERATURE";  // Reset temperature
-    image.src = "https://cdn.icon-icons.com/icons2/3191/PNG/512/smog_earth_world_planet_clouds_cloudy_weather_icon_194263.png";  // Default image for reset
+    image.src = "https://images.icon-icons.com/571/PNG/512/thermometer-temperature-control-tool-weather-interface-symbol_icon-icons.com_54635.png";  // Default image for reset
 }
 
 let search = async() =>{
@@ -71,5 +71,14 @@ cityname.addEventListener('keypress', (event) => {
             button.classList.remove('hover');  // Remove the hover class after a short delay
         }, 200);  // 200ms is the delay before removing the class
         search();  // Trigger the search function
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {  // Check if the ESC key was pressed
+        resetBtn.classList.add('resethover');  // Add the hover class when ESC is pressed
+        setTimeout(() => {
+            resetBtn.classList.remove('resethover');  // Remove hover class after 200ms
+        }, 200);  
+        reset();  // Trigger the reset function
     }
 });

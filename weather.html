@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="bkgrnd">
+        <div class="title">
+            <h1>WEATHER REPORT</h1>
+            <input id="cityname" type="text" placeholder="Enter City"><br><br>
+            <button id="btn" onclick="search()">FIND</button>
+            <button id="resetBtn" onclick="reset()">RESET</button>
+        </div>
+        
+
+        <div class="outer">
+            <div class="weatherdiv">
+                <div class="weatherinfo">
+                    <h1 id="city">CITY</h1>
+                    <h2 id="country"">COUNTRY</h2><br>
+                    <img id="image" src="https://images.icon-icons.com/571/PNG/512/thermometer-temperature-control-tool-weather-interface-symbol_icon-icons.com_54635.png" alt="">
+                    <h1><span id="temp">TEMPRATURE</span><sup>o</sup>C</h1>
+                </div>
+                <div class="weatherinfo2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

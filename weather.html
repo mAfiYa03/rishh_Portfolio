@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <div class="bkgrnd">
-        <div class="title">
-            <h1>WEATHER REPORT</h1>
-            <input id="cityname" type="text" placeholder="Enter City"><br><br>
-            <button id="btn" onclick="search()">FIND</button>
-            <button id="resetBtn" onclick="reset()">RESET</button>
-        </div>
-        
-
-        <div class="outer">
-            <div class="weatherdiv">
-                <div class="weatherinfo">
-                    <h1 id="city">CITY</h1>
-                    <h2 id="country"">COUNTRY</h2><br>
-                    <img id="image" src="https://images.icon-icons.com/571/PNG/512/thermometer-temperature-control-tool-weather-interface-symbol_icon-icons.com_54635.png" alt="">
-                    <h1><span id="temp">TEMPRATURE</span><sup>o</sup>C</h1>
-                </div>
-                <div class="weatherinfo2">
-
-                </div>
-            </div>
-        </div>
+    <div class="background">
+        <!-- Floating weather icons -->
+        <img src="https://images.icon-icons.com/571/PNG/512/sunny-day-weather-stroke-symbol_icon-icons.com_54642.png" class="float-icon" style="top:10%; left:5%; animation-delay:0s;">
+        <img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" class="float-icon" style="top:30%; left:80%; animation-delay:3s;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163657.png" class="float-icon" style="top:60%; left:20%; animation-delay:5s;">
+        <img src="https://cdn-icons-png.flaticon.com/512/642/642102.png" class="float-icon" style="top:80%; left:70%; animation-delay:7s;">
     </div>
+
+    <div class="container">
+        <header>
+            <h1 class="app-title">Weather Report</h1>
+        </header>
+
+        <section class="search-section">
+            <input id="cityname" type="text" placeholder="Enter city name...">
+            <div class="btn-group">
+                <button id="btn" onclick="search()">Find</button>
+                <button id="resetBtn" onclick="reset()">Reset</button>
+            </div>
+        </section>
+
+        <section class="weather-card">
+            <div class="weather-info">
+                <h2 id="city">City</h2>
+                <p id="country">Country</p>
+                <div class="icon-wrapper">
+                    <img id="image" class="icon" src="https://cdn-icons-png.flaticon.com/512/1116/1116453.png" alt="Weather Icon">
+                </div>
+                <h3><span id="temp">Temperature</span><sup>°C</sup></h3>
+            </div>
+        </section>
+    </div>
+
     <script src="weather.js"></script>
 </body>
 </html>
